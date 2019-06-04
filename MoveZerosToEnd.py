@@ -8,22 +8,13 @@ eq. input: [1,2,0,6,5,0,10]
 '''
 
 def move_end(array):
-    currentIdx = 0
-    zeroIdx = -1
-    while(currentIdx < len(array)):
-        if array[currentIdx] != 0:
-            if zeroIdx != -1:
-                array[currentIdx], array[zeroIdx] = array[zeroIdx], array[currentIdx]
-                zeroIdx = currentIdx
-            currentIdx = currentIdx + 1
+    count = 0
+    for n in array:
+        if n == 0:
+            count += 1
 
-        else:
-            if zeroIdx == -1:
-                zeroIdx = currentIdx
-            else:
-                pass
-
-            currentIdx += 1
+    array[:] =[i for i in array if i!=0 ]
+    array += [0]*count
 
 if __name__ == '__main__':
     array = [1,2,0,6,5,0,10]
