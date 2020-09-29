@@ -19,12 +19,3 @@ class LRU():
 
         if len(self._dict) > self.max:
             self._dict.popitem(last=False)
-
-lru = LRU(3)
-
-lru.put(1, 1)
-lru.put(2, 2)
-lru.put(3, 3)
-assert lru.get(1) # 1
-lru.put(4, 4)
-assert lru.get(2) # None
