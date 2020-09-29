@@ -16,9 +16,7 @@ class Solution(object):
         preprocess_s = ''
         for ch in s:
             preprocess_s += ch + '#'
-        print preprocess_s
         preprocess_s = '$#' + preprocess_s + '@'
-        print preprocess_s
 
         # start solution
         C = 0
@@ -34,10 +32,5 @@ class Solution(object):
             if i + dp[i] > R:
                 R = i + dp[i]
                 C = i
-        print dp
+
         return max(dp)
-
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.longestPalindromeSubstring('"ABABA"')
