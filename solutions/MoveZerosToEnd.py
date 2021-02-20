@@ -32,5 +32,5 @@ def move_end(array):
 
 if __name__ == '__main__':
     array = [1,2,0,6,5,0,10]
-    move_end(array)
-    print(array)
+    print('input:', array)
+    print('outpub', move_end(array))
